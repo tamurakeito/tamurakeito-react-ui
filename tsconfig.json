@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "es6",
+    "lib": ["dom", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "declaration": true,
+    "declarationDir": "types",
+    "emitDeclarationOnly": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "jsx": "react"
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.stories.tsx"]
+}
