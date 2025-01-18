@@ -106,3 +106,4 @@ dist
 
 # editor setting file
 .idea
+*storybook.log

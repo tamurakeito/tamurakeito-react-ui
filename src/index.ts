@@ -14,3 +14,4 @@ export {
 } from "./libs/Button/component";
 export { Center } from "./libs/Center/component";
 export { Input } from "./libs/Input/component";
+export { Icon } from "./libs/Icon/component";
