@@ -4,6 +4,12 @@ import { terser } from "rollup-plugin-terser";
 import postcss from "rollup-plugin-postcss";
 import autoprefixer from "autoprefixer";
 import dts from "rollup-plugin-dts";
+import alias from "@rollup/plugin-alias";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default [
   {
@@ -27,6 +33,7 @@ export default [
         plugins: [autoprefixer()],
         sourceMap: true,
         minimize: true,
+        modules: true,
         use: [
           [
             "sass",
@@ -37,6 +44,15 @@ export default [
         ],
       }),
       terser(),
+      alias({
+        entries: [
+          { find: "src", replacement: path.resolve(__dirname, "src") }, // "src"を絶対パスにマッピング
+          {
+            find: "assets",
+            replacement: path.resolve(__dirname, "src/assets"),
+          },
+        ],
+      }),
     ],
     external: ["react", "react-dom"],
   },

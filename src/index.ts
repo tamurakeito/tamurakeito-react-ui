@@ -1,10 +1,4 @@
-export {
-  Text,
-  textSizes,
-  TextSize,
-  textColors,
-  TextColor,
-} from "./libs/Text/component";
+export { Text, textSizes, TextSize, textColors, TextColor } from "./libs/Text";
 export {
   Button,
   buttonVariants,
