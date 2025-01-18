@@ -1,0 +1,173 @@
+@use "assets/scss/config/variables" as var;
+
+.button {
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.005);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &_xs {
+    padding: 1px 6px;
+    border-radius: var.$CORNER_SM - 1px;
+    font-weight: var.$FONT_WEIGHT_TEXT;
+    font-size: var.$FONT_SIZE_TEXT_XS;
+  }
+
+  &_sm {
+    border-radius: var.$CORNER_SM;
+    padding: 0 10px;
+    min-height: 10 * var.$SPACE_DELTA;
+    font-weight: var.$FONT_WEIGHT_TEXT;
+    font-size: var.$FONT_SIZE_NORMAL;
+  }
+
+  &_md {
+    border-radius: var.$CORNER_MD;
+    padding: 0 5 * var.$SPACE_DELTA;
+    min-height: 14 * var.$SPACE_DELTA;
+    font-weight: var.$FONT_WEIGHT_TEXT;
+    font-size: 16px;
+  }
+
+  &_primary {
+    background-color: var.$PRIMARY;
+    color: var.$WHITE;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      background-color: var.$PRIMARY_HOVER;
+      color: var.$GRAY_100;
+    }
+
+    &:focus {
+      background-color: var.$PRIMARY_HOVER;
+      box-shadow: 0 0 0 3px var.$DANGER_SOFT;
+      color: var.$GRAY_100;
+    }
+
+    &_disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &_white {
+    background-color: var.$WHITE;
+    color: var.$GRAY_700;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color: var.$GRAY_400;
+
+    &:hover {
+      background-color: var.$GRAY_300;
+    }
+
+    &:focus {
+      background-color: var.$WHITE;
+      box-shadow: 0 0 0 2px var.$GRAY_400;
+    }
+
+    &_disabled {
+      opacity: 0.4;
+    }
+  }
+
+  &_light {
+    background-color: var.$GRAY_200;
+    color: var.$GRAY_800;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      background-color: var.$GRAY_400;
+    }
+
+    &:focus {
+      background-color: var.$GRAY_400;
+      box-shadow: 0 0 0 2px var.$GRAY_100;
+    }
+
+    &_disabled {
+      opacity: 0.45;
+    }
+  }
+
+  &_danger {
+    background-color: var.$DANGER;
+    color: var.$WHITE;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      background-color: var.$DANGER_HOVER;
+      color: var.$GRAY_100;
+    }
+
+    &:focus {
+      background-color: var.$DANGER_HOVER;
+      box-shadow: 0 0 0 3px var.$DANGER_SOFT;
+      color: var.$GRAY_100;
+    }
+
+    &_disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &_primaryLight {
+    background-color: var.$PRIMARY_X_SOFT;
+    color: var.$PRIMARY;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      background-color: var.$PRIMARY_SOFT;
+      color: var.$PRIMARY;
+    }
+
+    &:focus {
+      background-color: var.$PRIMARY_SOFT;
+      box-shadow: 0 0 0 3px var.$PRIMARY_X_SOFT;
+      color: var.$PRIMARY;
+    }
+
+    &_disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &_outline {
+    background-color: var.$WHITE;
+    color: var.$PRIMARY;
+    border: 1px solid var.$PRIMARY;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      background-color: var.$PRIMARY_HOVER;
+      color: var.$WHITE;
+    }
+
+    &:focus {
+      outline: 0;
+      background-color: var.$PRIMARY_HOVER;
+      box-shadow: 0 0 0 3px var.$DANGER_SOFT;
+      color: var.$GRAY_100;
+    }
+
+    &_disabled {
+      opacity: 0.5;
+    }
+  }
+}

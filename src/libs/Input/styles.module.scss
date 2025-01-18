@@ -1,0 +1,7 @@
+@use "assets/scss/config/variables" as var;
+
+.input {
+  &:focus {
+    outline: 0;
+  }
+}
