@@ -1,3 +1,5 @@
+@use "assets/scss/config/variables" as var;
+
 .icon {
   display: inline-flex;
   align-items: center;
@@ -5,6 +7,78 @@
   &--loading {
     animation: loading 0.8s infinite linear;
     transform: rotate(360deg);
+  }
+  .color {
+    &_black {
+      path {
+        fill: var.$BLACK_DARK;
+      }
+    }
+    &_gray_100 {
+      path {
+        fill: var.$GRAY_100;
+      }
+    }
+    &_gray_200 {
+      path {
+        fill: var.$GRAY_200;
+      }
+    }
+    &_gray_300 {
+      path {
+        fill: var.$GRAY_300;
+      }
+    }
+    &_gray_400 {
+      path {
+        fill: var.$GRAY_400;
+      }
+    }
+    &_gray_500 {
+      path {
+        fill: var.$GRAY_500;
+      }
+    }
+    &_gray_600 {
+      path {
+        fill: var.$GRAY_600;
+      }
+    }
+    &_gray_700 {
+      path {
+        fill: var.$GRAY_700;
+      }
+    }
+    &_gray_800 {
+      path {
+        fill: var.$GRAY_800;
+      }
+    }
+    &_gray_900 {
+      path {
+        fill: var.$GRAY_900;
+      }
+    }
+    &_white {
+      path {
+        fill: var.$WHITE;
+      }
+    }
+    &_primary {
+      path {
+        fill: var.$PRIMARY;
+      }
+    }
+    &_primary_soft {
+      path {
+        fill: var.$PRIMARY_SOFT;
+      }
+    }
+    &_info {
+      path {
+        fill: var.$INFO;
+      }
+    }
   }
 }
 
