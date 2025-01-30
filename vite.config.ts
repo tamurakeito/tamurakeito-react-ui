@@ -13,5 +13,13 @@ export default defineConfig({
   },
   css: {
     modules: {},
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+      },
+      sass: {
+        api: "modern-compiler",
+      },
+    },
   },
 });

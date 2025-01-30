@@ -54,7 +54,7 @@ export default [
         ],
       }),
     ],
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", "classnames"],
   },
   {
     input: "dist/cjs/types/index.d.ts",

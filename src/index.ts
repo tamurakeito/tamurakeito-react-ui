@@ -8,4 +8,7 @@ export {
 } from "./libs/Button/component";
 export { Center } from "./libs/Center/component";
 export { Input } from "./libs/Input/component";
-export { Icon } from "./libs/Icon/component";
+export { Icon, iconTypes, IconType } from "./libs/Icon/component";
+
+// assets
+export { colors, Color } from "./assets/styles/colors";
