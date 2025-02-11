@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { forwardRef } from "react";
 import classes from "./styles.module.scss";
 import classNames from "classnames";
@@ -25,7 +25,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     }: InputProps,
     ref
   ) => {
+    const [isComposing, setIsComposing] = useState(false);
     const clazz = classNames(classes.input, className);
+
     return (
       <input
         ref={ref}
@@ -34,7 +36,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         value={value}
         placeholder={placeholder}
         onChange={onChange}
-        onKeyDown={onKeyDown}
+        onKeyDown={(e) => {
+          if (!isComposing && onKeyDown) {
+            onKeyDown(e);
+          }
+        }}
+        onCompositionStart={() => setIsComposing(true)}
+        onCompositionEnd={() => setIsComposing(false)}
         {...props}
       />
     );
