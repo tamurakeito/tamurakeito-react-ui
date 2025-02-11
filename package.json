@@ -1,6 +1,6 @@
 {
   "name": "tamurakeito-react-ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -15,7 +15,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "push": "chmod 755 .git_push.sh &&./.git_push.sh",
-    "deploy": "yarn build && npm publish && yarn push"
+    "deploy": "npm login && yarn build && npm publish && yarn push"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
@@ -51,6 +51,7 @@
     "react": "^18.3.0",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^18.3.0",
+    "react-feather": "^2.0.10",
     "rollup": "^3.2.3",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-postcss": "^4.0.2",
